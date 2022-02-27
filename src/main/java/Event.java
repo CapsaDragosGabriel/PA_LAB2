@@ -12,7 +12,22 @@ public class Event{
         this.start=start;
         this.end=end;
     }
+    /* public void delete()
+     {
+         this.name="NULL";
+         this.size= Integer.parseInt("NULL");
+         this.start=Integer.parseInt("NULL");
+         this.end=Integer.parseInt("NULL");
 
+     }
+     public void setAll(String name,int size, int start,int end)
+     {
+         this.name=name;
+         this.size=size;
+         this.start=start;
+         this.end=end;
+
+     }*/
     public void setName(String name) {
         this.name = name;
     }
@@ -65,4 +80,6 @@ public class Event{
         Event other = (Event) obj;
         return name.equals(other.name);
     }
+
+
 }

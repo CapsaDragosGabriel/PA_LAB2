@@ -22,11 +22,15 @@ public class Compulsory {
         System.out.println(r405);
         System.out.println(r309);
         System.out.println();
-        System.out.println(l1.equals(l1));
+
+
+       // System.out.println(l1);
     }
 
     public static void main(String[] args) {
         Compulsory app= new Compulsory();
         app.CompulsoryTest();
+
+
     }
 }
