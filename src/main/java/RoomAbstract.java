@@ -1,8 +1,6 @@
-public abstract class RoomAbstract {
+public abstract  class RoomAbstract {
     private String name;
-    private RoomType type;
     private int cap;
-
 
     public int getCap() {
         return cap;
@@ -20,19 +18,10 @@ public abstract class RoomAbstract {
         this.name = name;
     }
 
-    public RoomType getType() {
-        return type;
-    }
-
-    public void setType(RoomType type) {
-        this.type = type;
-    }
-
     @Override
     public String toString() {
         return "Room{" +
                 "name='" + name + '\'' +
-                ", type=" + type +
                 ", cap=" + cap +
                 '}';
     }

@@ -10,7 +10,7 @@ public class Room {
         this.type=type;
     }
 
-    public int getCap() {
+       public int getCap() {
         return cap;
     }
 
