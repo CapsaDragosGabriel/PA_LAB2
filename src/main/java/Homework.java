@@ -33,7 +33,8 @@ public class Homework {
         int index;
 
         for (index= 0; index<= countEvents; index++) {
-            if (test.equals(events[index]) == true) {//aicindexse poate adauga un mesaj pe care-l afisam cand nu se poate adauga evenimentul
+            if (test.equals(events[index]) == true) {
+                
                 return -1;
             }
         }
