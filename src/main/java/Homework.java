@@ -20,24 +20,24 @@ public class Homework {
     }
 
     public void ShowEvents() {
-        for (int i = 0; i < countEvents; i++)
-            System.out.println(events[i]);
+        for (int index= 0; index< countEvents; index++)
+            System.out.println(events[index]);
     }
 
     public  void ShowRooms() {
-        for (int i = 0; i < countRooms; i++)
-            System.out.println(rooms[i]);
+        for (int index= 0; index< countRooms; index++)
+            System.out.println(rooms[index]);
     }
 
     public  int CheckDuplicates(Event test) {
-        int i;
+        int index;
 
-        for (i = 0; i <= countEvents; i++) {
-            if (test.equals(events[i]) == true) {//aici se poate adauga un mesaj pe care-l afisam cand nu se poate adauga evenimentul
+        for (index= 0; index<= countEvents; index++) {
+            if (test.equals(events[index]) == true) {//aicindexse poate adauga un mesaj pe care-l afisam cand nu se poate adauga evenimentul
                 return -1;
             }
         }
-        if (test.equals(events[i]) == false) {
+        if (test.equals(events[index]) == false) {
             events[countEvents] = test;
             countEvents++;
         }
@@ -46,15 +46,14 @@ public class Homework {
     }
 
     public int CheckDuplicates(Room test) {
-        int i;
+        int index;
 
-        for (i = 0; i <= countRooms; i++) {
-            if (test.equals(rooms[i]) == true) {
-                //aici se poate adauga un mesaj pe care-l afisam cand nu se poate adauga camera
+        for (index= 0; index<= countRooms; index++) {
+            if (test.equals(rooms[index]) == true) {
                 return -1;
             }
         }
-        if (test.equals(rooms[i]) == false) {
+        if (test.equals(rooms[index]) == false) {
             rooms[countRooms] = test;
             countRooms++;
         }
