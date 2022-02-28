@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
-public class Homework {
-   public Room[] rooms = new Room[10];
-  public  Event[] events = new Event[10];
+public class HomeworkAbstract {
+    public RoomAbstract[] rooms = new RoomAbstract[10];
+    public  Event[] events = new Event[10];
     public int countEvents = 0;
     public int countRooms=0;
     public  int AddEvents(Event test) {
@@ -12,7 +12,7 @@ public class Homework {
         return countEvents;
     }
 
-    public  int AddRooms( Room test) {
+    public  int AddRooms( RoomAbstract test) {
         int p = 0;
         p = CheckDuplicates(test);
         if (p != -1) countRooms = p;
@@ -46,7 +46,7 @@ public class Homework {
         return countEvents;
     }
 
-    public int CheckDuplicates(Room test) {
+    public int CheckDuplicates(RoomAbstract test) {
         int index;
 
         for (index= 0; index<= countRooms; index++) {
@@ -73,7 +73,7 @@ public class Homework {
 
     public static void main(String[] args) {
 
-        Homework app = new Homework();
+        HomeworkAbstract app = new HomeworkAbstract();
         app.ShowEvents();
 
         Event c1=new Event("C1",100,8,10);
@@ -89,20 +89,15 @@ public class Homework {
         app.AddEvents(l3);
 
 
-        Room r401=new Room("401",30,RoomType.COMPUTER_LAB);
-        Room r403=new Room("403",30,RoomType.COMPUTER_LAB);
-        Room r405=new Room("405",30,RoomType.COMPUTER_LAB);
-        Room r309=new Room("309",30,RoomType.LECTURE_HALL);
-        app.AddRooms(r401);
-        app.AddRooms(r403);
-        app.AddRooms(r405);
-        app.AddRooms(r309);
 
 
-
-       // System.out.println(app);
-
-
+        ComputerLab c5 = new ComputerLab("Lab1",30,OSType.W10);
+        // System.out.println(app);
+        c5.setType(OSType.W8);
+        LectureHall lecture1= new LectureHall("Lecture1",100,true);
+        app.AddRooms(c5);
+        app.AddRooms(c5);
+        app.AddRooms(lecture1);
         app.ShowEvents();
         app.ShowRooms();
     }
