@@ -45,7 +45,43 @@ public class HomeworkAbstract {
 
         return countEvents;
     }
+    public void SortEvents()
+    {
+        int iterator1=0;
+        int iterator2=0;
+        for (iterator1=0;iterator1<countEvents;iterator1++)
+        {
+            for (iterator2=iterator1+1;iterator2<countEvents;iterator2++) {
+            if (events[iterator1].getSize()<events[iterator2].getSize())
+            {
+                Event swap= new Event();
+                swap=events[iterator1];
+                events[iterator1]=events[iterator2];
+                events[iterator2]=swap;
+            }
 
+            }
+        }
+    }
+    /*
+    public void SortRooms()
+    {
+        int iterator1=0;
+        int iterator2=0;
+        for (iterator1=0;iterator1<countRooms;iterator1++)
+        {
+            for (iterator2=iterator1+1;iterator2<countRooms;iterator2++) {
+                if (rooms[iterator1].getCap()<rooms[iterator2].getCap())
+                {
+                     RoomAbstract swap= new RoomAbstract();
+                    swap=events[iterator1];
+                    events[iterator1]=events[iterator2];
+                    events[iterator2]=swap;
+                }
+
+            }
+        }
+    }*/
     public int CheckDuplicates(RoomAbstract test) {
         int index;
 
@@ -81,13 +117,14 @@ public class HomeworkAbstract {
         Event l1=new Event("L1",30,8,10);
         Event l2=new Event("L2",30,8,10);
         Event l3=new Event("L3",30,10,12);
+        Event l4=new Event("L4",70,10,12);
         app.AddEvents(c1);
         app.AddEvents(c2);
         app.AddEvents(l1);
         app.AddEvents(l2);
         app.AddEvents(l3);
         app.AddEvents(l3);
-
+        app.AddEvents(l4);
         ComputerLab c5 = new ComputerLab("Lab1",30,OSType.W10);
         // System.out.println(app);
         c5.setType(OSType.W8);
@@ -97,9 +134,11 @@ public class HomeworkAbstract {
         app.AddRooms(lecture1);
         app.ShowEvents();
         app.ShowRooms();
-
+        app.SortEvents();
+        app.ShowEvents();
+/*
         Solution sol=new Solution();
         sol.setSchedule(c5,c1);
-        System.out.println(sol);
+        System.out.println(sol);*/
     }
 }
