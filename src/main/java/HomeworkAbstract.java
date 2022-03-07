@@ -88,9 +88,6 @@ public class HomeworkAbstract {
         app.AddEvents(l3);
         app.AddEvents(l3);
 
-
-
-
         ComputerLab c5 = new ComputerLab("Lab1",30,OSType.W10);
         // System.out.println(app);
         c5.setType(OSType.W8);
@@ -100,5 +97,9 @@ public class HomeworkAbstract {
         app.AddRooms(lecture1);
         app.ShowEvents();
         app.ShowRooms();
+
+        Solution sol=new Solution();
+        sol.setSchedule(c5,c1);
+        System.out.println(sol);
     }
 }
