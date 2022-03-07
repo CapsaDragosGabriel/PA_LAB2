@@ -1,5 +1,7 @@
 # PA_LAB2
 Capsa Dragos Gabriel 2A6
+
+
 Am utilizat HomeworkAbstract si RoomAbstract pentru varianta cu clasele abstracte de la tema.
 
 Am pastrat insa si varianta initiala pentru orice caz.
